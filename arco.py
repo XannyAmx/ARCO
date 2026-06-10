@@ -733,14 +733,22 @@ ejemplos:
     return p.parse_args()
 
 
+def clean_domain(raw):
+    d = raw.strip().lower()
+    for prefix in ("https://", "http://"):
+        if d.startswith(prefix):
+            d = d[len(prefix):]
+    return d.rstrip("/")
+
+
 def load_domains(args):
     """Retorna lista de dominios limpios desde -d o -D."""
     if args.domain:
-        return [args.domain]
+        return [clean_domain(args.domain)]
     try:
         with open(args.domain_list, encoding="utf-8") as f:
             domains = [
-                line.strip().lower().lstrip("https://").lstrip("http://").rstrip("/")
+                clean_domain(line)
                 for line in f
                 if line.strip() and not line.startswith("#")
             ]
