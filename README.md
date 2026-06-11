@@ -147,7 +147,7 @@ Todas las fuentes son **gratuitas y no requieren registro**.
 
 - **Dominio bloqueado en headers:** Si el servidor filtra por IP (geo-block, WAF, firewall), ARCO detecta la causa automáticamente y la muestra como diagnóstico.
 - **Rate limit de WayBack CDX:** Si la API retorna `503` con `x-rl: 0`, significa que se alcanzó el límite de solicitudes para tu IP. Espera ~15 minutos y reintenta.
-- **Emails en sitios con JavaScript:** Muchos sitios cargan correos dinámicamente. ARCO extrae emails de HTML estático, `mailto:` y páginas archivadas en WayBack. Para directorios de funcionarios de gobierno mexicano, combínalo con [GOBO](https://github.com/TU_USUARIO/gobo).
+- **Emails en sitios con JavaScript:** Muchos sitios cargan correos dinámicamente. ARCO extrae emails de HTML estático, `mailto:` y páginas archivadas en WayBack.
 
 ---
 
