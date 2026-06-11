@@ -23,7 +23,7 @@ ARCO automatiza el reconocimiento pasivo y activo de dominios combinando múltip
 ## Instalación
 
 ```bash
-git clone https://github.com/TU_USUARIO/arco.git
+git clone https://github.com/XannyAmx/arco.git
 cd arco
 pip install -r requirements.txt
 ```
